@@ -1,0 +1,150 @@
+@use "./scss/abstracts";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  min-height: 100vh;
+  font-family: Tahoma, arial, sans-serif;
+}
+body {
+  position: relative;
+  background-color: rgb(90, 102, 116);
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+#root {
+  min-height: 100vh;
+  padding-bottom: 3.5rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background-color: abstracts.$color;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: rgb(0, 127, 255);
+  font-weight: 200;
+  font-size: abstracts.$size;
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 1rem;
+  line-height: 2.5rem;
+}
+
+footer p {
+  color: #a4a7ab;
+  font-weight: 500;
+}
+.note {
+  color: #a4a7ab;
+  background: rgb(0, 30, 60);
+  border-radius: 7px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 16px;
+  width: calc(1200px / 5);
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: rgb(139, 194, 47);
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  background-color: transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  position: relative;
+  width: 480px;
+  margin: 60px auto 50px auto;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137), 0 0 14px 3px rgba(0, 0, 0, 0.3);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  color: rgb(139, 194, 47);
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: #c8cacc51;
+}
+
+form button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background-color: rgb(0, 127, 255);
+  color: rgb(240, 206, 94);
+  border: rgb(0, 127, 255) 1px solid;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+form button:hover {
+  background-color: #a4a7ab;
+}
+
+.container__notes {
+  margin: 0 3.4rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+form,
+form > * {
+  background: abstracts.$color;
+}
