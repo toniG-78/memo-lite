@@ -18,7 +18,7 @@ body {
 
 #root {
   min-height: 100vh;
-  padding-bottom: 3.5rem;
+  padding-bottom: 20rem;
 }
 
 .container {
@@ -92,6 +92,7 @@ footer p {
 form {
   position: relative;
   width: 480px;
+  max-width: 95%;
   margin: 60px auto 50px auto;
   padding: 15px;
   border-radius: 7px;
@@ -147,4 +148,12 @@ form button:hover {
 form,
 form > * {
   background: abstracts.$color;
+}
+
+@media (max-width: 500px) {
+  body {
+    p.powered-by {
+      font-size: 0.7rem;
+    }
+  }
 }
